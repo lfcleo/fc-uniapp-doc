@@ -36,7 +36,12 @@ FC-Uniapp 默认集成了网络请求模块
 
 ## 使用方法
 
-1. 在`src/modules/types.ts`文件中定义网络请求接口的响应结构体。
+1. 终端执行命令安装模块<sapn class="marker-evy">（如若创建项目时已选择了该模块，可略过这一步）</sapn>
+```bash
+fcuni c request
+```
+
+2. `src/modules/types.ts`文件中定义网络请求接口的响应结构体。
 ```ts:line-numbers
 export interface Auth {
     token: string;			// token
@@ -44,7 +49,7 @@ export interface Auth {
 }
 ```
 
-2. 在`src/modules/network/request.ts`文件中配置网络请求模块。
+3. `src/modules/network/request.ts`文件中配置网络请求模块。
 ```ts:line-numbers
 import { useAuthStore } from "@/modules/stores/auth"    // 引入auth模块的store，用于设置token
 
@@ -171,9 +176,9 @@ export default reqeust
 :::
 
 
-3. 在`src/modules/network/apis.ts`文件中定义网络请求接口。
+4. `src/modules/apis.ts`文件中定义网络请求接口。
 ```ts:line-numbers
-import request from "./network/request"
+import request from "@/modules/network/request"
 import type * as Types from "@/modules/types"
 
 export function demo(data: object): Promise<Types.Auth> {
@@ -185,10 +190,11 @@ export function demo(data: object): Promise<Types.Auth> {
 }
 ```
 
-4. 使用网络请求接口
+5. 使用网络请求接口
 ```ts:line-numbers
-import * as API from "@/modules/network/apis";
+import * as API from "@/modules/apis";
 
+// 可以这样使用
 async function testPost() {
     try {
         const authData = await API.demo({
@@ -199,6 +205,18 @@ async function testPost() {
     } catch (error) {
         console.log(error)
     }
+}
+
+// 也可以这样使用
+function testPost() {
+    API.demo({
+        username: 'admin',
+        password: '123456',
+    }).then((authData) => {
+        console.log(authData)
+    }).catch((error) => {
+        console.log(error)
+    })
 }
 ```
 

@@ -29,12 +29,12 @@ https://www.xxx.com/api/upload/test.txt
 
 ## 使用方法
 
-1. 终端执行
+1. 终端执行命令安装模块<sapn class="marker-evy">（如若创建项目时已选择了该模块，可略过这一步）</sapn>
 ```bash
 fcuni c upload
 ```
 
-2. 在`src/modules/network/upload.ts`文件中配置上传文件模块。
+2. `src/modules/network/upload.ts`文件中配置上传文件模块。
 ```ts:line-numbers
 import { useAuthStore } from "@/modules/stores/auth";   // 引入auth模块的store，用于设置token
 
@@ -103,7 +103,7 @@ export default new FC.Upload({
 如果项目需要请求多个不同的接口，并且每个接口配置不同，可以 `new` 多个 `FC.Upload` 实例。
 :::
 
-3. 在`src/modules/network/apis.ts`文件中定义上传文件接口。
+3. `src/modules/apis.ts`文件中定义上传文件接口。
 ```ts:line-numbers
 /**
  * 测试API--上传文件
@@ -198,7 +198,7 @@ export function apiUploadMultiFileOnProgress(
 
 4. 使用上传文件接口
 ```ts:line-numbers
-import * as API from "@/modules/network/apis";
+import * as API from "@/modules/apis";
 ...
 // 测试上传单文件
 function testUploadFile() {

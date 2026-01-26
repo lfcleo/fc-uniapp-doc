@@ -13,7 +13,7 @@
 npm install vue-i18n@9.14.5
 ```
 
-2. 终端执行以下命令安装多语言模块：
+2. 终端执行以下命令安装多语言模块<sapn class="marker-evy">（如若创建项目时已选择了该模块，可略过这一步）</sapn>
 ```bash
 fcuni c locale
 ```

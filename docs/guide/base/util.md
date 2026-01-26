@@ -2,7 +2,7 @@
 
 FC-Uniapp 提供了一些比较实用的工具类，用于简化开发过程。持续更新
 
-终端执行
+终端执行命令安装模块<sapn class="marker-evy">（如若创建项目时已选择了该模块，可略过这一步）</sapn>
 ```bash
 fcuni c utils
 ```

@@ -1,16 +1,21 @@
 # 安装使用
 
+使用 crate-fc-uniapp 脚手架创建项目，可以对默认集成的模块进行自定义选择。
+
 ## 安装
-终端执行下面命令clone项目到本地
+终端执行脚手架安装
 
 ```bash
-git clone https://github.com/lfcleo/fc-uniapp.git
+npm create fc-uniapp
 ```
-
-下载成功后，cd进入项目目录，安装项目依赖
+根据指示输入项目名称、所需功能模块。等待项目创建完成后执行
 
 ```bash
-cd fc-uniapp && npm i
+# 进入项目目录
+cd <项目名称>
+
+# 安装依赖
+npm i
 ```
 
 ## 运行
@@ -25,7 +30,7 @@ cd fc-uniapp && npm i
 | :---: | :---: | :---: | :---: |
 | `FC.Store` | 状态管理模块 | √ | x |
 | `FC.Router` | 路由模块 | √ | x |
-| `FC.Request` | 网络请求模块 | √ | √ |
+| `FC.Request` | 网络请求模块 | x | √ |
 | `FC.useSysGlobalStore().theme` | 主题模块 | x | √ |
 | `FC.i18n` | 多语言模块 | x | √ |
 | `FC.Upload` | 上传模块 | x | √ |

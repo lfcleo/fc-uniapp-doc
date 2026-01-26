@@ -9,8 +9,12 @@ FC-Uniapp 提供了静态和动态两种切换方式。
 该模块依赖`FC.Store`模块和`src/components/FcBaseView/FcBaseView.vue`组件。
 
 ## 静态切换主题使用方法
+1. 终端执行命令安装模块<sapn class="marker-evy">（如若创建项目时已选择了该模块，可略过这一步）</sapn>
+```bash
+fcuni c theme
+```
 
-1. 新建`src/modules/style/theme.ts`文件，配置主题。例如：
+2. `src/modules/style/theme.ts`文件，配置主题。例如：
 ```ts:line-numbers
 // 默认主题（浅色）
 export const themeData = {
@@ -68,7 +72,7 @@ export const themeData1 = {
 示例中的字段并不是固定的，可根据实际情况定义。但需注意`navbar`和`tabbar`的内容结构要和示例中的保持一致。这是更改系统导航栏和tabbar的主题样式所需的字段。
 :::
 
-2. 在`src/modules/style/unocss.config.ts`文件中配置主题，使用起来方便些。
+3. 在`src/modules/style/unocss.config.ts`文件中配置主题，使用起来方便些。
 ```ts:line-numbers
 ...
     shortcuts: [
@@ -99,7 +103,7 @@ export const themeData1 = {
 这一步是可选的。如果不配置，也可以在代码中直接使用变量名。要用`var(--bg)`、`var(--color)`等。
 :::
 
-3. 在`src/App.vue`文件中，设置使用默认主题，例如：
+4. 在`src/App.vue`文件中，设置使用默认主题，例如：
 ```ts:line-numbers
 ...
 import { themeData } from "@/modules/style/theme"
@@ -110,7 +114,7 @@ onLaunch(() => {
 });
 ```
 
-4. 在`src/components/FcBaseView/FcBaseView.vue`文件中，引入主题。例如：
+5. 在`src/components/FcBaseView/FcBaseView.vue`文件中，引入主题。例如：
 
 ```vue:line-numbers {2-38,34-37}
 <script setup lang="ts">
@@ -186,7 +190,7 @@ onShow(() => {
 可以在`FcBaseView.vue`组件中添加`custom-class`属性
 :::
 
-5. 切换主题
+6. 切换主题
 
 只需要在合适的地方，设置`FC.useSysGlobalStore().theme`即可。例如：
 ```ts:line-numbers

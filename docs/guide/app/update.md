@@ -233,7 +233,7 @@ export const config = {
 4. 在`App.vue`中初始化更新配置
 ```ts:line-numbers {2,6-10}
 <script setup lang="ts">
-import { apiCheckAppUpdate } from '@/modules/network/apis'  // 检查app更新接口
+import { apiCheckAppUpdate } from '@/modules/apis'  // 检查app更新接口
 
 onShow(() => {
     console.log("App Show");
@@ -257,7 +257,7 @@ onShow(() => {
 </template>
 
 <script setup lang="ts">
-import { apiCheckAppUpdateTest } from '@/modules/network/apis'
+import { apiCheckAppUpdateTest } from '@/modules/apis'
 
 async function checkUpdate() {
     try {

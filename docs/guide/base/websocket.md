@@ -14,12 +14,12 @@ FC-Uniapp 集成了下载文件模块
 
 ## 使用方法
 
-1. 终端执行
+1. 终端执行命令安装模块<sapn class="marker-evy">（如若创建项目时已选择了该模块，可略过这一步）</sapn>
 ```bash
 fcuni c websocket
 ```
 
-2. 在`src/modules/network/websocket.ts`文件中配置下载文件模块。
+2. `src/modules/network/websocket.ts`文件中配置WebSocket模块。
 ```ts:line-numbers
 import { useAuthStore } from "@/modules/stores/auth";   // 引入auth模块的store，用于设置token
 
