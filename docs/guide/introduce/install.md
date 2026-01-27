@@ -14,11 +14,19 @@
 
 以MacOS为例，（Windows和Linux系统请根据实际情况替换命令）
 
-全局安装脚手架，（建议使用`sudo` 确保有管理员权限）
+全局安装脚手架
 
 ```bash
-sudo npm i -g create-fc-uniapp
+sudo npm i -g fc-uniapp
 ```
+::: tip 提示
+建议使用`sudo`安装全局脚手架，确保有管理员权限。
+
+上方命令只需执行1次即可，再次创建新项目时，无需重复执行。
+
+更新脚手架命令`sudo npm update -g fc-uniapp`
+:::
+
 然后在指定目录，执行以下命令创建项目
 
 ```bash
