@@ -11,11 +11,18 @@
 `HBuilderX` (作者版本v4.87)
 
 ## 安装
-终端执行脚手架安装
+
+全局安装脚手架，（建议使用`sudo` 确保有管理员权限）
 
 ```bash
-npm create fc-uniapp
+sudo npm i -g create-fc-uniapp
 ```
+然后在指定目录，执行以下命令创建项目
+
+```bash
+fc-uniapp
+```
+
 根据指示输入项目名称、所需功能模块。等待项目创建完成后执行
 
 ```bash
