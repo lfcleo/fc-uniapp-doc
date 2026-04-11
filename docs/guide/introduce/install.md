@@ -10,6 +10,8 @@
 
 `HBuilderX` (作者版本v4.87)
 
+`git` (作者版本v2.39.3)
+
 ## 安装
 
 以MacOS为例，（Windows和Linux系统请根据实际情况替换命令）
@@ -19,6 +21,7 @@
 ```bash
 sudo npm i -g fc-uniapp
 ```
+
 ::: tip 提示
 建议使用`sudo`安装全局脚手架，确保有管理员权限。
 
@@ -51,22 +54,22 @@ npm i
 
 ## 默认集成模块
 
-| 模块 | 说明 | 是否默认集成 | 是否可移除 |
-| :---: | :---: | :---: | :---: |
-| `FC.Store` | 状态管理模块 | √ | x |
-| `FC.Router` | 路由模块 | √ | x |
-| `FC.Request` | 网络请求模块 | x | √ |
-| `FC.useSysGlobalStore().theme` | 主题模块 | x | √ |
-| `FC.i18n` | 多语言模块 | x | √ |
-| `FC.Upload` | 上传模块 | x | √ |
-| `FC.Download` | 下载模块 | x | √ |
-| `FC.Websocket` |  websocket模块 | x | √ |
-| `FC.Utils` |  工具类模块 | x | √ |
-| `FC.Authorize` |  系统权限模块 | x | √ |
-| `FC.Updated` |  版本更新模块 | x | √ |
-| `FC.JGPush` |  极光推送模块 | x | √ |
-|  | 自定义iconfont和字体 | x | √ |
-|  | 隐私协议弹窗 | x | √ |
+|              模块              |         说明         | 是否默认集成 | 是否可移除 |
+| :----------------------------: | :------------------: | :----------: | :--------: |
+|           `FC.Store`           |     状态管理模块     |      √       |     x      |
+|          `FC.Router`           |       路由模块       |      √       |     x      |
+|          `FC.Request`          |     网络请求模块     |      x       |     √      |
+| `FC.useSysGlobalStore().theme` |       主题模块       |      x       |     √      |
+|           `FC.i18n`            |      多语言模块      |      x       |     √      |
+|          `FC.Upload`           |       上传模块       |      x       |     √      |
+|         `FC.Download`          |       下载模块       |      x       |     √      |
+|         `FC.Websocket`         |    websocket模块     |      x       |     √      |
+|           `FC.Utils`           |      工具类模块      |      x       |     √      |
+|         `FC.Authorize`         |     系统权限模块     |      x       |     √      |
+|          `FC.Updated`          |     版本更新模块     |      x       |     √      |
+|          `FC.JGPush`           |     极光推送模块     |      x       |     √      |
+|                                | 自定义iconfont和字体 |      x       |     √      |
+|                                |     隐私协议弹窗     |      x       |     √      |
 
 ## Demo插件地址
 
