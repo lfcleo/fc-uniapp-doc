@@ -12,7 +12,7 @@ export default defineConfig({
         logo: { src: '/favicon.ico', type: "image/png", width: 24, height: 24 },
         nav: [
             { text: '指南', link: '/guide/introduce/install' },
-            { text: '模板', link: '/template' },
+            { text: '组件', link: '/component/introduce' },
             { text: '插件市场', link: 'https://ext.dcloud.net.cn/plugin?id=26616' },
         ],
 
@@ -90,7 +90,14 @@ export default defineConfig({
                         link: '/problem'
                     }
                 ]
-            }
+            },
+            '/component/': {
+                base: '/component/',
+                items: [
+                    { text: '介绍', link: '/introduce' },
+                    { text: 'FC-Modal弹窗', link: '/modal' },
+                ]
+            },
         },
 
         socialLinks: [
